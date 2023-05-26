@@ -1,0 +1,21 @@
+import pandas as pd
+import numpy as np
+import matplotlib as plt
+
+df=pd.read_csv("Iris.csv")
+df.head()
+
+'Iris-setosa'
+setosa = df['Species'] == 'Iris-setosa'
+df[setosa].describe()
+
+'Iris-versicolor'
+versicolor = df['Species'] == 'Iris-versicolor'
+df[versicolor].describe()
+
+'Iris-virginica'
+virginica = df['Species'] == 'Iris-virginica'
+df[virginica].describe()
+
+df.dtypes
+df.dtypes.value_counts()
